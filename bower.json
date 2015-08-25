@@ -1,0 +1,19 @@
+{
+  "name": "best-practices",
+  "version": "0.0.1",
+  "authors": [
+    "Victor Rivera <victor.riverac92@gmail.com>"
+  ],
+  "description": "Mejores practicas en el desarrollo web y mas.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "4.0.0-alpha"
+  }
+}
