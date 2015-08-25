@@ -165,8 +165,12 @@
 				var href = $(this).attr("href");
 
 				window.history.pushState({url: "" + href + ""}, href, href);
-				href = href.replace('/', '');
+				href = href.replace('./', '');
 				$('article').css('display', 'none');
+				if(href == '')
+				{
+					href = 'introduccion';
+				}
 				$('#' + href).css('display', 'block');
 			});
 			$('article').css('display', 'none');
