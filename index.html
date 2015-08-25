@@ -34,16 +34,13 @@
 				<a href="/programacion">2 - Programación</a>
 			</li>
 			<li>
-				<a href="/estandares">3 - Estandares</a>
+				<a href="/frameworks">3 - Frameworks</a>
 			</li>
 			<li>
-				<a href="/frameworks">4 - Frameworks</a>
+				<a href="/ide">4 - IDE's</a>
 			</li>
 			<li>
-				<a href="/ide">5 - IDE's</a>
-			</li>
-			<li>
-				<a href="/tecnologias">6 - Tecnologías</a>
+				<a href="/tecnologias">5 - Tecnologías</a>
 			</li>
 			<li>&nbsp;</li>
 			<li>
@@ -110,8 +107,8 @@
 						<br />
 						Aqui debemos tener claro como funciona la web por lo que dejo a muestra una pequeña tabla y una imagen que habla de ello.
 						<br />
-						<table border="1">
-							<thead>
+						<table class="table">
+							<thead class="thead-inverse">
 								<tr>
 									<th>Lenguaje</th>
 									<th>¿Que hace el servidor?</th>
@@ -146,6 +143,8 @@
 								</tr>
 							</tbody>
 						</table>
+						<br />
+						<img class="img-thumbnail" src="images/diagrama.png" width="80%" />
 					</p>
 					<hr class="m-y-md" />
 					<p class="lead">
@@ -166,7 +165,12 @@
 				var href = $(this).attr("href");
 
 				window.history.pushState({url: "" + href + ""}, href, href);
+				href = href.replace('/', '');
+				$('article').css('display', 'none');
+				$('#' + href).css('display', 'block');
 			});
+			$('article').css('display', 'none');
+			$('#introduccion').css('display', 'block');
 		});
 	</script>
 </body>
