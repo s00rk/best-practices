@@ -25,11 +25,11 @@
 			$('itc-cabecera').attr('descripcion', descripcion);
 
 			$('itc-postlist').css('display', 'none');
-			$('#' + url).css('display', 'block');
+			$('post-' + url).css('display', 'block');
 
 			$('header').css('background-image', 'url("http://www.isdomotics.com/img/colaboradores/nuevas-tecnologias.jpg")');
 			
-			window.history.pushState({'url': "" + url + ""}, url, url);
+			//window.history.pushState({'url': "" + url + ""}, url, url);
 			e.preventDefault();
 		}
 	});
