@@ -1,0 +1,38 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="itc-postpreview">
+
+<template>
+	<div class="post-preview">
+		<a href="{{url}}" on-click="postPreview">
+			<content select="h2"></content>
+			<content select="h3"></content>
+		</a>
+	</div>
+	<hr>
+</template>
+
+<script>
+	Polymer({
+		is: "itc-postpreview",
+
+		postPreview: function (e){
+			var titulo = $(this).find('h2').first().text();
+			var descripcion = $(this).find('h3').first().text();
+			var url = $(this).attr('url');
+
+			$('itc-cabecera').attr('titulo', titulo);
+			$('itc-cabecera').attr('descripcion', descripcion);
+
+			$('itc-postlist').css('display', 'none');
+			$('#' + url).css('display', 'block');
+
+			$('header').css('background-image', 'url("http://www.isdomotics.com/img/colaboradores/nuevas-tecnologias.jpg")');
+			
+			window.history.pushState({'url': "" + url + ""}, url, url);
+			e.preventDefault();
+		}
+	});
+</script>
+
+</dom-module>
