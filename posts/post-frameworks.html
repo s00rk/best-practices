@@ -1,0 +1,92 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="post-frameworks">
+
+<template>
+	<itc-post>
+		<p class="lead">
+
+			En el mundo del desarrollo siempre excisten frameworks o herramientas que nos facilitan algunos trabajos o procesos repetitivos, para estos casos y como muchos hemos enfocado en estos puntos, ya hay formas de evadirlos o simplemente ya no enfocarnos en esos puntos sino directamente en nuestro producto o software y dejamos estas tareas repetitivas por un lado sin hacer tanto enfoque a ellas.
+
+		</p>
+		<p>
+
+			Tanto para el FrontEnd como para el BackEnd hay herramientas para avanzar en proyectos rapidamente con diferentes lenguajes y sus frameworks, o bibliotecas para avanzar por lo que aqui hablaremos de algunas de ellas para ambos entornos.
+
+		</p>
+		<p>
+			<h2>FrontEnd</h2>
+			<hr />
+			<a target="_blank" href="http://gulpjs.com/"><strong>Gulp</strong></a>
+			<img src="https://raw.githubusercontent.com/gulpjs/artwork/master/gulp-2x.png" width="100">
+			<br />
+			Este es una biblioteca para frontend la cual se encarga de aquellos procesos repetitivos o que siempre ocupamos hacer tales como minificar css, javascript, compilar jade, entre otros.
+			<br />
+			Lo que viene siendo el poder automatizar tareas, que es el propoisito de esta biblioteca.
+			<br />
+			Ademas de eso tiene bastante documentacion y MUCHOS plugins para las tareas mas comunes que un desarrollador frontend hace e igualmente si tienes una tarea diferente tu puedes crear tu propia tarea agregarla a el y despreocuparte de volver a hacerla en cierta ocacion.
+			<br />
+			O lo que pasa aveces que tienes MUCHAS tareas, creas tu codigo y con el cual se ejecutaran todas en secuencia segun el orden que hayas dado y facilitas el trabajo.
+			<br />
+			P.D. Cabe aclarar que para el uso de Gulp es necesario tener instalado NodeJs
+			<hr />			
+		</p>
+
+		<p>
+			<a target="_blank" href="https://learnboost.github.io/stylus/"><strong>Stylus</strong></a>
+			<img src="http://html5facil.com/wp-content/uploads/2014/03/stylus-logo1.png" width="100">
+			<br />
+			Esta biblioteca es un preprocesador de CSS, con el cual nos facilita mucho trabajo al hacer nuestro css, ademas de que algo que me encanta es de que te hace hacer un codigo legible o identado por lo que te hace tener una mejor estructura en tu hota de estilos.
+			<br />
+			La verdad no hay mucho que decir pues por si solo habla las grandes cosas que puedes hacer y no solo eso sino ademas te ayuda junto con una biblioteca aparte llamada <label class="label">nib</label> nos quita el gran problema sobre algunas etiquetas que solo funciona en ciertos navegadores los exportaba a otros si es que existen.
+			<br />
+			Aqui un ejemplo:
+			<br />
+			<strong>estilo.styl</strong>
+			<br />
+			<code>
+			@import 'nib'
+			<br />
+			body
+			<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;font: 12px Helvetica, Arial, sans-serif;
+			<br />
+			a.button
+			<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;border-radius: 5px;
+			</code>
+			<br /><br />
+			Se conviente en:
+			<strong>estilo.css</strong>
+			<br />
+			<code>
+			body {
+			<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;font: 12px Helvetica, Arial, sans-serif;
+			<br />
+			}
+			<br />
+			a.button {
+			<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;-webkit-border-radius: 5px;
+			<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;-moz-border-radius: 5px;
+			<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;border-radius: 5px;
+			<br />
+			}
+			</code>
+			<br />
+			P.D. Cabe aclarar que para el uso de Stylus es necesario tener instalado NodeJs
+			<hr />
+		</p>
+	</itc-post>
+</template>
+
+<script>
+	Polymer({
+		is: "post-frameworks"
+	});
+</script>
+
+</dom-module>
